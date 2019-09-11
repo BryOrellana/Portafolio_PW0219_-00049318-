@@ -1,0 +1,87 @@
+@import "init";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include mainstyle();
+}
+
+.botonesHeader button{
+    @include botonesHeader();
+}
+
+.botonesFooter button{
+    @include BotonesFooter();
+}
+
+footer div{
+    display:flex;   
+    justify-content: space-between;
+
+}
+
+.botonesFooter{
+    width: 200vh;
+}
+
+.center {
+   @include center();
+
+}
+
+h1 {
+    @include title();
+}
+
+hr { 
+    @include line();
+}
+
+.logos {
+   @include Flex();
+}
+
+img{
+    @include img();
+
+&:hover{
+    border:3px solid purple;
+    }
+}
+
+header{
+    @include Flexfoot();
+}
+
+footer{
+    @include Flexfoot();
+}
+
+.botonesFooter button {
+@include BotonFoot();
+
+}
+
+.botonesHeader > .botonOpen{
+    background-color: purple;
+}
+
+.botonesHeader>.botonDown{
+    background-color: blue;
+}
+
+.botonesHeader>.botonFAQ{
+    background-color: hotpink;
+}
+
+.botonesFooter>.botonCont{
+    @include bofo();
+
+}
+
+.botonesFooter>.botonHelp{
+    @include bhelp;
+
+}

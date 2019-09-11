@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+$color1: white;
+$color2: gray;
+$color3: black;
+
+$fontSize: 15pt;
+$fontSize2:85px;
+
+$textType: upppercase;
+
+$marginL: 5px;
+
+
+
+@mixin mainstyle {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 100vh;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 1em 5%;
+    margin: 0;
+}
+
+@mixin BotonesHeader{
+    width: 115px;
+    height: 35px;
+    border: none;
+    border-radius: 8%;
+    color: $color1;
+    font-size: $fontSize; 
+    margin-left: $marginL;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    font-family: 'Amatic SC', cursive;
+
+    &:hover{
+        background-color: $color3;
+        opacity: 0.5;
+    }
+}
+
+@mixin BotonesFooter {
+    width: 85px;
+    height: 35px;
+    border: none;
+    border-radius: 8%;
+    background-color: $color2;
+    color: $color1;
+    text-decoration: underline $color1;
+    font-size: $fontSize;
+    margin-left: $marginL;
+    flex-flow: row wrap;
+    justify-items: flex-start;
+    font-family: 'Amatic SC', cursive;
+
+    &:hover{
+        background-color: $color3;
+        opacity: 0.5;
+    }
+}
+
+@mixin Flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+@mixin Flexfoot{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 5px
+}
+
+@mixin img {
+    border: 1px solid $color3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+@mixin center {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 35vh;
+    flex-direction: column;
+}
+
+@mixin title {
+    color: $color2;
+    font-size: $fontSize2;
+    text-transform: $textType;
+    font-family: 'Stint Ultra Condensed', cursive;
+    margin: 10px;
+    letter-spacing: 5px; 
+}
+
+@mixin line{
+    border: 3px solid $color2;
+    border-radius: 5px;
+    width: 450px;
+}
+
+@mixin bhelp {
+    border-radius: 10%;
+    margin-top: 130px;
+    padding: 10px;
+}
